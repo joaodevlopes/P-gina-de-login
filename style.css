@@ -1,133 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-#container-esquerdo {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-}
-
-#left-background {
-    background-image: url('imagem/vapores-de-cafe-fresco-na-mesa-de-madeira-fecham-a-ia-generativa-1.webp');
-    background-size: cover;
-    background-position: center;
-    width: 50%; 
-    height: 100%;
-    position: relative;
-}
-
-
-
-#right-content {
-    background-color: rgb(255, 255, 255);
-    width: 50%; /* Metade da tela para o fundo branco */
-    position: absolute;
-    right: -200px;
-
-    transform: translateX(100px);
-}
-
-#container-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-    padding: 20px;
-    width: 390px;
-    max-width:700px; 
-    height: 500px;
-    text-align: center; 
-    position: relative;
-    top: -38px;
-}
-
-#right-content .titulo{
-    color: #5B5B5B ;
-    position: absolute;
-    left: 110px;
-}
-
-#right-content .subtitulo{
-    color: rgb(214, 209, 209);
-    position: absolute;
-    top: 50px;
-    right: 617px;
-}
-
-
-
-input{
-    background-color: rgb(240, 236, 230);
-    color: black;
-    position: relative;
-    margin: 20px;
-}
-
-#container-login .email{
-    display: flex;
-    position: absolute;
-    top: 190px;
-    left: 25px;
-    color: #5B5B5B;
-}
-
-#container-login .senha{
-    position: absolute;
-    top: 250px;
-    left: 25px;
-    color: #5B5B5B;
-}
-
-#email-text, #senha-text {
-    border-radius: 8px;
-    border: none;
-    width: 100%; 
-    padding: 8px;
-    margin-bottom: 10px;
-    position: relative;
-}
-
-#botaoEntrar {
-    border: none;
-    background-color: #35be1c;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: 340px;
-    padding: 8px 16px;
-    border-radius: 3px;
-    width: 350px;
-    height: 44px;
-    transition: background-color .2s ease;
+    color: #333;
+    background: linear-gradient(135deg, #e3d5ca, #c9a799);
+    
     
 }
 
-#botaoEntrar:hover{
-    background-color: #31d813;
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    height: 90vh;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/*tirando a visibilidade*/
-#right-content, .titulo{
+.lado-esquerdo {
+    width: 60%;
+    background-image: url('imagem/Coffee\ break-cuate.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120%;
+}
+
+.lado-direito {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #ffffff;
+    transform: translateX(10px);
+}
+
+.titulo {
+    font-size: 2rem;
+    color: #593C1F;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitulo, .subtitulo-cadastro {
+    color: #7d7d7d;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+label {
+    color: #593C1F;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #593C1F;
+}
+
+#botao, .botao-cadastro {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    background-color: #593C1F;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-cadastro {
+    margin-left: 11%;
+}
+
+#botao:hover, .botao-cadastro:hover {
+    background-color: #7a4f24;
+}
+
+.lado-direito, .titulo{
     visibility: hidden; 
 }
 
-/* adicionando uma nova cor na caixinha*/
 
-.novacor {
-    border: 2px solid #35be1c; /* Borda verde */
-    background-color: rgba(53, 190, 28, 0.1); /* Fundo claro verde */
+@media(max-width:940px){
+    .lado-direito{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .lado-esquerdo{
+        display: none;
+    }
 }
 
+@media(max-width:375px){
+    .subtitulo-cadastro{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}

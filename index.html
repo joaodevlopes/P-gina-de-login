@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login cafeteria </title>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Login Cafeteria</title>
 </head>
-
 <body>
-    <div id="container-esquerdo">
-        <div id="left-background"></div>
-    </div>
-
-    <div id="right-content">
-        <h1 class="titulo">Bem vindo</h1>
-        <h4 class="subtitulo"> entre com sua conta ou cadastre-se no nosso site </h4>
-        <div id="container-login">
-            <p class="email">Email:</p>
-                <input id="email-text" type="text">
-            <p class="senha">Senha:</p>    
-                <input id="senha-text" type="password" >
-                <button id="botaoEntrar">Entrar</button>
-                
+    <section class="container">
+        <div class="lado-esquerdo"></div>
+        <div class="lado-direito">
+            <div class="subir">
+                <h1 class="titulo">Bem Vindo</h1>
+                <p class="subtitulo">Entre com sua conta ou cadastre-se no nosso site</p>
+            </div>
+            <div class="input-group">
+                <label for="email-text">Email:</label>
+                <input id="email-text" type="text" placeholder="Digite seu email">
+            </div>
+            
+            <div class="input-group">
+                <label for="senha-text">Senha:</label>
+                <input id="senha-text" type="password" placeholder="Digite sua senha">
+            </div>
+            <button id="botao">Entrar</button>
+            <div class="cadastrar-container">
+                <p class="subtitulo-cadastro">Se não tiver conta, <strong>Cadastre-se</strong></p>
+                <button class="botao-cadastro">Cadastre-se</button>
+            </div>
         </div>
-    </div>
+    </section>
 </body>
-<script src="script.js"></script>
-
+<script src="javas.js"></script>
 </html>
